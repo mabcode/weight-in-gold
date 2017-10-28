@@ -8,6 +8,6 @@ import time
 
 def index(request):
     now = time.strftime('%c')
-    return HttpResponse("Hello, you are in the polls index. \n Time is %s" % now)
+    return HttpResponse("Hello, you are in the polls index. Time is %s" % now)
 
 # Create your views here.
