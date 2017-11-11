@@ -1,0 +1,182 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    background-image: url('http://www.myfreetextures.com/wp-content/uploads/2011/08/2011-06-11-09621.jpg');
+    background-size: cover;
+    width: 100%;
+}
+
+
+h1 {
+    font-size: 10rem;
+    text-align: center;
+    text-shadow: 10px 10px 10px black;
+    font-family: 'Papyrus';
+    text-transform: uppercase;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    display: inline-block;
+    margin: 25px;
+    font-size: 2rem;
+    height: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn{
+    font-family: Georgia;
+    color: #32CD32;
+    background: rgba(196, 199, 206, .6);
+    padding: 29px 40px 8px 12px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.btn:hover {
+    background: #abd4eb;
+    background-image: linear-gradient(to bottom, #abd4eb, #0c4266);
+    text-decoration: none;
+}
+
+
+
+/*display main */
+
+.homeMain {
+    display: flex;
+    flex-direction: column;
+}
+
+main p {
+    font-size: 4rem;
+}
+
+.pages article {
+    display: inline-block;
+    width: 65%;
+}
+
+.blog article{
+    display: inline-block;
+    height: 30rem;
+    flex-wrap: wrap;
+    overflow: scroll;
+    margin: 3rem;
+    background-color: rgba(196, 199, 206, .6);
+    width: 50%;
+}
+
+aside {
+    float: right;
+    display: block;
+    height: 30%;
+    margin: 3rem;
+    width: 30%;
+}
+
+h2 {
+    font-family: cursive;
+    font-size: 5rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+footer {
+    font-family: monospace;
+    font-size: 2rem;
+    background-color: rgba(196, 199, 206, .6);
+}
+
+td:hover {
+    background-color: lightgreen;
+}
+
+
+td {
+    width: 420px;
+    height: 30px;
+    vertical-align: bottom
+}
+
+td:first-of-type {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+tr:nth-child(2n) {
+    background-color: rgba(196, 199, 206, .6); }
+
+tr:nth-child(2n+1) {
+    background-color: white;
+}
+
+.code {
+    font-size: 20px;
+    color: green;
+}
+
+table {
+    font-size: 14px;
+}
+
+.cheatTab {
+    display: flex;
+    flex-direction: row;
+}
+
+.cheatTab header {
+    background-color: rgba(196, 199, 206, .6);
+}
+
+.cheat article {
+    display: inline-block;
+    height: 40rem;
+    flex-wrap: wrap;
+    overflow: auto;
+    margin: 3rem;
+    width: 40%;
+    min-width: 40rem;
+}
+
+main img {
+    margin-left: 28%;
+}
+
+.blog img , .pages img {
+    height: 25rem;
+    width: 15rem;
+}
+
+
+
+.git, .html , .css ,.blog article {
+    background-image: url('https://image.freepik.com/free-vector/abstract-background-with-a-3d-pattern_1319-68.jpg');
+}
+.git{
+   background-attachment: fixed; 
+   order:2;
+}
+.html{
+   background-attachment: scroll; 
+   order:1;
+}
+.css{
+   background-attachment: local; 
+   order:0;
+}
+.blog article {
+    background-attachment: fixed;
+}
+
+.cheat {
+    display: Flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
