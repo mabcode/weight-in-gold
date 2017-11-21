@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
 
 
@@ -17,7 +18,7 @@
         <nav>
             <ul>
                 <li class="btn"><a href="{% url 'blogs:home'%}">HOME</a></li>
-                <li class="btn"><a href="{% url 'blogs:archive'%}">ARCHIVE</a></li>
+                <li class="btn"><a href="{% url 'blogs:archive' request.id %}">ARCHIVE</a></li>
             </ul>
         {% if full_blog_list %}
             <ul>

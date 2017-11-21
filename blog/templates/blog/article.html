@@ -29,8 +29,8 @@
                     <h2>{{article.title}}</h2>
                     <p>{{article.content}}</p>
                 </article>
-                <aside>
-                    
+                 <aside>
+                    <li class="btn"><a href="{% url 'blogs:comments' article.id %}">MAKE COMMENT</a></li>
                 </aside>
             </div>
         </main>

@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li class="btn"><a href="{% url 'blogs:home'%}">HOME</a></li>
-                <li class="btn"><a href="{% url 'blogs:archive' %}">ARCHIVE</a></li>
+                <li class="btn"><a href="{% url 'blogs:archive'%}">ARCHIVE</a></li>
             </ul>
         {% if latest_blog_list %}
             <ul>
@@ -41,8 +41,7 @@
                     <p>{{article.content|truncatewords:200 }}</p>
                 </article>
                 <aside>
-                    <P>THERE ARE {{Comments.choice_set.all}} </P>
-                    
+                    <P>TOTAL # OF COMMENTS {{article.blog}} </P>
                 </aside>
                 {% endfor %}
             </div>

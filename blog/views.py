@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.views import generic
 from django.urls import reverse
 
+
 from .models import Article, Comments
 
 
@@ -22,7 +23,7 @@ class ArticleView(generic.DetailView):
 class ArchiveView(generic.ListView):
     template_name = "blog/archive.html"
     context_object_name = 'full_blog_list'
-    def get_queryset(self):
+    def get_queryset(Article):
         return Article.objects.order_by('-posted_date')
 
 def postComment(request, blog_id):
