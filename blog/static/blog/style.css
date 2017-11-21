@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-image: url('http://www.myfreetextures.com/wp-content/uploads/2011/08/2011-06-11-09621.jpg');
+    background-image: url('https://hdwallsource.com/img/2014/8/free-highway-wallpaper-29369-30088-hd-wallpapers.jpg');
     background-size: cover;
     width: 100%;
 }
@@ -30,13 +30,25 @@ nav a {
     text-decoration: none;
 }
 
-.btn{
+.btn {
     font-family: Georgia;
     color: #32CD32;
     background: rgba(196, 199, 206, .6);
     padding: 29px 40px 8px 12px;
     text-decoration: none;
     margin: 5px;
+}
+
+.homeMain .btn {
+    font-size: 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    display:block;
+    width:55%;
+    text-align:center;
+    margin-top:6rem;
+    
+    
 }
 
 .btn:hover {
@@ -61,6 +73,9 @@ main p {
 .pages article {
     display: inline-block;
     width: 65%;
+    color:black;
+    background-color: rgba(196, 199, 206, .7);
+    
 }
 
 .blog article{
@@ -70,7 +85,7 @@ main p {
     overflow: scroll;
     margin: 3rem;
     background-color: rgba(196, 199, 206, .6);
-    width: 50%;
+    width: 55%;
 }
 
 aside {

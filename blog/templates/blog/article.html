@@ -1,0 +1,43 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>mack</title>
+</head>
+
+<body>
+    <header>
+        <h1>{{article.title}}</h1>
+        <nav>
+             <ul>
+                <li class="btn"><a href="{% url 'blogs:home'%}">HOME</a></li>
+                <li class="btn"><a href="{% url 'blogs:archive'%}">ARCHIVE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="homeMain">
+        <main>
+            <div class="pages">
+                <article>
+                    <h2>{{article.title}}</h2>
+                    <p>{{article.content}}</p>
+                </article>
+                <aside>
+                    
+                </aside>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>All work and images belong to Marc Bigler, 2017.</p>
+    </footer>
+</body>
+
+</html>

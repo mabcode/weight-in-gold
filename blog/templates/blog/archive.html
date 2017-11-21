@@ -3,24 +3,25 @@
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
 
 
+    
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>HOME</title>
+    <title>ARCHIVE</title>
 </head>
 
 <body>
     <header>
-        <h1>HOME</h1>
+        <h1>ARCHIVE</h1>
         <nav>
             <ul>
                 <li class="btn"><a href="{% url 'blogs:home'%}">HOME</a></li>
-                <li class="btn"><a href="{% url 'blogs:archive' %}">ARCHIVE</a></li>
+                <li class="btn"><a href="{% url 'blogs:archive'%}">ARCHIVE</a></li>
             </ul>
-        {% if latest_blog_list %}
+        {% if full_blog_list %}
             <ul>
-            {% for article in latest_blog_list %}
+            {% for article in full_blog_list %}
                 <li class="btn"><a href="{% url 'blogs:article' article.id %}">{{article.title}}</a></li>
             {% endfor %}
             </ul>
@@ -35,18 +36,17 @@
             {% if latest_blog_list %}
             <div class="blog">
                 {% for article in latest_blog_list %}
-                <li class="btn"><a href="{% url 'blogs:article' article.id %}">{{article.title}}</a></li>
                 <article>
                     <h2>{{article.title}}</h2>
                     <p>{{article.content|truncatewords:200 }}</p>
                 </article>
+                
                 <aside>
-                    <P>THERE ARE {{Comments.choice_set.all}} </P>
                     
                 </aside>
                 {% endfor %}
             </div>
-            {% endif %}
+             {% endif %}
         </main>
     </div>
 

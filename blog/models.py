@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils import timezone 
 
-class Blog(models.Model):
+class Article(models.Model):
     title = models.CharField(max_length=200)
     authors_name = models.CharField(max_length=200)
     content = models.TextField()
@@ -15,7 +15,7 @@ class Blog(models.Model):
         return self.content
         
 class Comments(models.Model):
-    blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
+    blog = models.ForeignKey(Article, on_delete=models.CASCADE)
     commenters_nickname = models.CharField(max_length=200)
     email_address = models.EmailField()
     content = models.TextField()

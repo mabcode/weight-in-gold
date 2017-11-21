@@ -1,0 +1,3 @@
+                <aside>
+                    <img src="{% static 'blog/images/Mack-Car.jpg' %}" alt="Picture of kid in car">
+                </aside>
