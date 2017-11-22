@@ -16,7 +16,7 @@ class Article(models.Model):
         
 class Comments(models.Model):
     blog = models.ForeignKey(Article, on_delete=models.CASCADE)
-    commenters_nickname = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
     email_address = models.EmailField()
     content = models.TextField()
     posted_date  = models.DateTimeField(auto_now_add=True)

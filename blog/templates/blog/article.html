@@ -27,16 +27,22 @@
             <div class="pages">
                 <article>
                     <h2>{{article.title}}</h2>
-                    <p>{{article.content}}</p>
+                    <p>{{article.content|truncatewords:200}}</p>
                 </article>
-                 <aside>
-                    <li class="btn"><a href="{% url 'blogs:comments' article.id %}">MAKE COMMENT</a></li>
-                </aside>
+                <div class="foo">
+                    <form method="POST" action="{% url 'blogs:comments' article.id %}">
+                        {% csrf_token %}
+                        <textarea name="content"></textarea>
+                        <input name="commenters_nickname" type="text">
+                        <input name="email_address" type="email">
+                        <button type="submit" value="text">Submit this comment</button>
+                    </form>
+                </div>
             </div>
         </main>
     </div>
     <footer>
-        <p>All work and images belong to Marc Bigler, 2017.</p>
+        <p>All work and images belong to Marc Bigler and anybody else, 2017.</p>
     </footer>
 </body>
 

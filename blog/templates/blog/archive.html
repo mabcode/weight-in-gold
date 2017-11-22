@@ -18,7 +18,7 @@
         <nav>
             <ul>
                 <li class="btn"><a href="{% url 'blogs:home'%}">HOME</a></li>
-                <li class="btn"><a href="{% url 'blogs:archive' request.id %}">ARCHIVE</a></li>
+                <li class="btn"><a href="{% url 'blogs:archive' %}">ARCHIVE</a></li>
             </ul>
         {% if full_blog_list %}
             <ul>
@@ -34,16 +34,16 @@
 
     <div class="homeMain">
         <main>
-            {% if latest_blog_list %}
+            {% if object_list %}
             <div class="blog">
-                {% for article in latest_blog_list %}
+                {% for article in object_list %}
                 <article>
                     <h2>{{article.title}}</h2>
                     <p>{{article.content|truncatewords:200 }}</p>
                 </article>
                 
                 <aside>
-                    
+                    {{article.choice_text}}
                 </aside>
                 {% endfor %}
             </div>

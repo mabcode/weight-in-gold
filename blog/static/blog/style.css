@@ -71,12 +71,18 @@ main p {
 }
 
 .pages article {
-    display: inline-block;
-    width: 65%;
+    width: 80%;
+    margin: 10rem;
     color:black;
     background-color: rgba(196, 199, 206, .7);
-    
+    word-wrap: break-word;
 }
+
+.pages article p{
+    margin: 10rem;
+}
+
+
 
 .blog article{
     display: inline-block;
@@ -194,4 +200,16 @@ main img {
     display: Flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.foo textarea{
+    height: 25rem;
+}
+
+.foo form{
+    display: flex;
+    flex-direction: column;
+    width: 76%;
+    margin-left: 13rem;
+    alignment-baseline:central;
 }
