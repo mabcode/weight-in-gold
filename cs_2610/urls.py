@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls')),
+    url(r'^weightInGold/', include('weightInGold.urls')),
 ]
