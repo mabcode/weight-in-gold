@@ -1,3 +1,14 @@
                 <aside>
                     <img src="{% static 'blog/images/Mack-Car.jpg' %}" alt="Picture of kid in car">
                 </aside>
+    
+Unit.objects.get(name="grams")
+
+from_factor = Unit.objects.get(name="grams")
+
+to_factor = Unit.objects.get(name="t_oz")
+
+1 write veiw
+2 write script
+3 pull corrisponting values 
+

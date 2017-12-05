@@ -4,5 +4,9 @@ from . import views
 
 app_name = "weightInGold"
 urlpatterns = [
-    url(r'^$', views.HomeView.as_view(), name='home'),
+    # /weightInGold/weightAPI?n=[some non-negative number]
+    url(r'^weightAPI$', views.weightAPI, name='weightAPI'),
+
+	# /weightInGold/
+    url(r'^$', views.index, name='index'),
 ]

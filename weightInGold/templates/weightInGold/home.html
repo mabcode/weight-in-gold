@@ -1,31 +1,59 @@
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'weightInGlod/style.css' %}" />
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Your weight in gold</title>
+		<link href="{% static 'weightInGold/style.css' %}" rel="stylesheet">
+	</head>
 
+	<body>
+        <div>
+            <div class="stuff-box green shadowed">
+				<h2>Compute Your Weight In Gold</h2>
+                <input type="number" id="weight" name="weight">
+                <button type="button" onclick="calculate()">Calculate</button>
+				<p id="result"></p>
+            </div>
+        </div>
+        
+        
+        
 
-<!DOCTYPE html>
-<html lang="en">
+		<script type="text/javascript">
+		
+		var calculate = function() {
+	var weightReqUrl = 'https://cs-2610-mabcode.c9users.io/weightInGold/weightAPI?n=' + document.querySelector("#weight").value;
+	var weightReq = new XMLHttpRequest();
+	weightReq.open('GET', weightReqUrl);
+	weightReq.responseType = 'json';
+	weightReq.send();
+	weightReq.onload = function() {
+		var json = weightReq.response;	
+		console.log(json);
+		document.querySelector('#result').textContent = json['computeWeight']
+	}
+}
 
-
-<head>
-    <title>Weight In Glod</title>
-</head>
-
-<body>
-    <header>
-        <h2>Weight In Glod</h2>
-    </header>
-
-    
-        <main>
-                <article>
-                   
-                </article>
-                
-                
-    <footer>
-        <p>All work and images belong to Marc Bigler and anybody else, 2017.</p>
-    </footer>
-</body>
-
+		
+	var apiKey = 'dBJjUJduyP4rcHbVHfs6';
+	var start = "2017-11-15";
+	var	end = "2017-11-20";
+	
+	var goldRUrl = "https://www.quandl.com/api/v3/datasets/LBMA/GOLD.json?api_key=" + apiKey + "&column_index=2&start_date=" + start + "&end_date=" + end;
+		
+	var priceOFGold;
+	var goldR = new XMLHttpRequest();
+	goldR.open('GET', goldRUrl);
+	goldR.responseType = 'json';
+	goldR.send();
+	goldR.onload = function() {
+		var json = goldR.response;
+		console.log(json);
+		priceOFGold = json.dataset.data[0][1];
+	}
+	
+		</script>
+	</body>
 </html>
+ 
