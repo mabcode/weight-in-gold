@@ -13,6 +13,7 @@
 				<h2>Compute Your Weight In Gold</h2>
                 <input type="number" id="weight" name="weight">
                 <button type="button" onclick="calculate()">Calculate</button>
+				<p>YOUR WEIGHT IN GOLD IS:</p>
 				<p id="result"></p>
             </div>
         </div>
@@ -21,7 +22,7 @@
 		
 		var calculate = function() {
 
-	var weightReqUrl = 'https://cs-2610-mabcode.c9users.io/weightInGold/weightAPI?n=' + document.querySelector("#weight").value;
+	var weightReqUrl = 'https://cs-2610-mabcode.c9users.io/api_convert/weightAPI?from=pound&to=troy_ounce&value=' + document.querySelector("#weight").value;
 	var weightReq = new XMLHttpRequest();
 	weightReq.open('GET', weightReqUrl);
 	weightReq.responseType = 'json';
@@ -30,7 +31,7 @@
 		var json = weightReq.response;	
 		console.log(json);
 		
-		document.querySelector('#result').textContent = json['computeWeight']*priceOFGold;
+		document.querySelector('#result').textContent = (json['value']*priceOFGold).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 	}
 }
 

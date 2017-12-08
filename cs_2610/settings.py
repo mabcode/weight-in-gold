@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'blog.apps.BlogConfig',
     'weightInGold.apps.WeightingoldConfig',
+    'api_convert.apps.ApiConvertConfig',
 
 ]
 

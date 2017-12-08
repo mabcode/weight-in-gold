@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls')),
     url(r'^weightInGold/', include('weightInGold.urls')),
+    url(r'^api_convert/', include('api_convert.urls')),
 ]
