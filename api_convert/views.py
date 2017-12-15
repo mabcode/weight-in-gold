@@ -20,7 +20,8 @@ def weightAPI(request):
 	#	print k, "=>", v   # DELETE ME
 
 	resp = {}
-
+ 
+ 
 	if not request.GET.has_key('value'):
 		resp['error'] = "Usage: value=[non-negative integer]"
 	else:
